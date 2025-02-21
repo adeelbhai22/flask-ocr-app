@@ -2,7 +2,8 @@ import pytesseract
 import cv2
 
 # Set the path to Tesseract executable (if needed)
-pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+pytesseract.pytesseract.tesseract_cmd = "/app/.apt/usr/bin/tesseract"
+
 
 def preprocess_image(image_path):
     """Enhance image quality for better OCR."""
