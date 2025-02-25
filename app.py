@@ -49,7 +49,7 @@ def extract_text(image_path):
 
     # Define regex patterns to find specific fields
     receipt_pattern = r"receipt\s*#\s*:\s*([\w\-]+)"   # Extracts receipt number
-    bill_to_pattern = r"bill to\s*:\s*(.*?)\s*address"  # Extracts "Bill To" before "Address"
+    bill_to_pattern = r"(?i)bill\s*to[:\s]*([\w\s,.-]+)"  # Captures full name
     total_pattern = r"total\s*:\s*\$?([\d\.,]+)"  # Extracts total
 
     # Extract values using regex search
